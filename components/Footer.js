@@ -31,10 +31,30 @@ const Footer = () => {
             <PoweredByBookinglane />
           </div>
           <div className={styles.iconsContainer}>
-            <FacebookIcon />
-            <TwitterIcon />
-            <InstagramIcon />
-            <LinkedinIcon />
+            <a
+              href="https://www.facebook.com/bookinglane"
+              style={{ textDecoration: "none", cursor: "pointer" }}
+            >
+              <FacebookIcon />
+            </a>
+            <a
+              href="https://twitter.com/bookinglane"
+              style={{ textDecoration: "none", cursor: "pointer" }}
+            >
+              <TwitterIcon />
+            </a>
+            <a
+              href="https://www.instagram.com/bookinglane/"
+              style={{ textDecoration: "none", cursor: "pointer" }}
+            >
+              <InstagramIcon />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/bookinglane"
+              style={{ textDecoration: "none", cursor: "pointer" }}
+            >
+              <LinkedinIcon />
+            </a>
           </div>
         </div>
       </div>

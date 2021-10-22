@@ -46,16 +46,38 @@ const MainContainer = ({ children, keywords }) => {
 
       <Script
         src="https://bookinglane-widgets.s3.us-east-2.amazonaws.com/delux-limo/widget.js"
-        strategy="lazyOnload"
+        onLoad={() => {
+          // let styleForJss3 = `
+          //   display: block;
+          // `
+          // document.getElementsByClassName("jss3").style = styleForJss3
+          // console.log(document.getElementsByClassName("jss5"))
+          document.body.querySelector(".jss3").style.display = "block"
+          // document.body.querySelector(".jss5").style.display = "none"
+          // document.body.querySelector(".jss5").style.width = "initial"
+          // document.body.querySelector(".jss5").style.bottom = "initial"
+          // document.body.querySelector(".jss5").style.height = "initial"
+          // document.body.querySelector(".jss5").style.position = "initial"
+          // document.body.querySelector(".jss5").style.background = "initial"
+        }}
+      ></Script>
+      {/* <Script
         onLoad={() => {
           // let styleForJss3 = `
           //   display: block;
           // `
           // document.getElementsByClassName("jss3").style = styleForJss3
 
-          document.body.querySelector(".jss3").style.display = "block"
+          // document.body.querySelector(".jss3").style.display = "block"
+          console.log(document.body.querySelector(".jss5"))
+          // document.body.querySelector(".jss5").style.left = "none"
+          // document.body.querySelector(".jss5").style.width = "initial"
+          // document.body.querySelector(".jss5").style.bottom = "initial"
+          // document.body.querySelector(".jss5").style.height = "initial"
+          // document.body.querySelector(".jss5").style.position = "initial"
+          // document.body.querySelector(".jss5").style.background = "initial"
         }}
-      ></Script>
+      ></Script> */}
       {/* <Script
         src="https://apis.google.com/js/api.js"
         type="text/javascript"

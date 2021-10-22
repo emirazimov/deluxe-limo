@@ -50,6 +50,22 @@ const useStyles = makeStyles((theme) => ({
       // width: "60%",
       // left: "0",
     },
+    "& .jss5": {
+      left: "initial",
+      width: "60%",
+      bottom: "initial",
+      height: "100%",
+      position: "none",
+      background: "black",
+    },
+    "& .jss6": {
+      left: "initial",
+      width: "initial",
+      bottom: "initial",
+      height: "initial",
+      position: "initial",
+      background: "initial",
+    },
     // "& .MuiDrawer-paperAnchorRight": {
     //   backgroundColor: "black",
     //   height: "100%",
