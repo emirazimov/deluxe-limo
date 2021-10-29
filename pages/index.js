@@ -83,9 +83,11 @@ export default function Home() {
               scrollToSectionContacts={scrollToSectionContacts}
             />
           </div>
-          <div ref={observe}>
-            <div className="OurServices">{inView && <OurServices />}</div>
+          {/* <div ref={observe}> */}
+          <div className="OurServices">
+            <OurServices />
           </div>
+          {/* </div> */}
           <div ref={observe}>
             <div className="Fleet">{inView && <Fleet />}</div>
           </div>

@@ -7,18 +7,24 @@ const MainContainer = ({ children, keywords }) => {
       <Head>
         <title>Deluxe Limo</title>
         <meta charSet="utf-8" />
-        <link rel="icon" href="../public/logo.png" />
+        <link
+          rel="icon"
+          href="https://delux-limo.s3.us-east-2.amazonaws.com/logo.jpg"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta
           name="keywords"
-          content="airport transfers,wine tours,Point to Point Transportation,City Tours,Weddings,Hourly Chauffer Services,dlxlimousine@gmail.com,dlxlimousine,Deluxe limo, limo, delux, limo delux"
+          content="airport transfers,wine tours,Point to Point Transportation,City Tours,Weddings,Hourly Chauffer Services,dlxlimousine@gmail.com,dlxlimousine,Deluxe limo, transportation company, Dispatch Software , limo software, Limo Dispatch System,  Flight Tracker, Driver Tracker, Limo Dispatching System, Livery Software, Limo Service Scheduling Software, Best Limo Software, online reservations, friendly limo software"
           //   keywords={
           //     "booking,book,bookinglane,trasnport,transportation,book transport,booking transport,crm mobile, moile crm" +
           //     keywords
           //   }
         ></meta>
-        <link rel="apple-touch-icon" href="logo.png" />
+        <link
+          rel="apple-touch-icon"
+          href="https://delux-limo.s3.us-east-2.amazonaws.com/logo.jpg"
+        />
         <meta
           name="description"
           content="LUXURY LIMOUSINES, PROFESSIONAL CHAUFFEURS, PREMIUM SERVICE"
@@ -40,6 +46,9 @@ const MainContainer = ({ children, keywords }) => {
           rel="stylesheet"
           href="https://bookinglane-widgets.s3.us-east-2.amazonaws.com/delux-limo/widget.css"
         />
+        <meta name="robots" content="all" />
+        <meta name="robots" content="max-snippet:-1"></meta>
+        <meta name="robots" content="max-image-preview:large"></meta>
       </Head>
       <div>{children}</div>
       <div id="widget-by-bookinglane"></div>
