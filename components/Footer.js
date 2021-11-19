@@ -28,7 +28,12 @@ const Footer = () => {
         <div className={styles.socialNetworkIcons}>
           <div className={styles.bookinglaneIcon}>
             {/* <Image src={poweredByBookinglane} alt="powered by bookinglane" objectFit="contain" /> */}
-            <PoweredByBookinglane />
+            <a
+              href="https://bookinglane.com/"
+              style={{ color: "none", textDecoration: "none" }}
+            >
+              <PoweredByBookinglane />
+            </a>
           </div>
           <div className={styles.iconsContainer}>
             <a
