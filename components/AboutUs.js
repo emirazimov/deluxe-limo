@@ -1,7 +1,7 @@
 // import Image from "next/image"
 import { TitleUnderline } from "../public/icons"
 import styles from "../styles/AboutUs.module.scss"
-import aboutUs from "../public/AboutUs-min.jpg"
+// import aboutUs from "../public/AboutUs-min.jpg"
 
 const AboutUs = () => {
   return (

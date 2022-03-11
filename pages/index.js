@@ -62,6 +62,7 @@ export default function Home() {
   const { observe, inView } = useInView({
     onEnter: ({ unobserve }) => unobserve(), // only run once
   })
+
   return (
     <>
       <MainContainer>

@@ -1,6 +1,6 @@
 // import Image from "next/image"
 import { CheckmarkIcon, CloseIcon } from "../public/icons"
-import menuIcon from "../public/menuIcon.png"
+// import menuIcon from "../public/menuIcon.png"
 import styles from "../styles/Header.module.scss"
 import Drawer from "@material-ui/core/Drawer"
 import { makeStyles, useTheme } from "@material-ui/core/styles"

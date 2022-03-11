@@ -1,5 +1,5 @@
 import styles from "../styles/Footer.module.scss"
-import menuIcon from "../public/menuIcon.png"
+// import menuIcon from "../public/menuIcon.png"
 // import Image from "next/image"
 import {
   FacebookIcon,
@@ -8,7 +8,7 @@ import {
   PoweredByBookinglane,
   TwitterIcon,
 } from "../public/icons"
-import poweredByBookinglane from "../public/poweredByBookinglane.png"
+// import poweredByBookinglane from "../public/poweredByBookinglane.png"
 
 const Footer = () => {
   return (

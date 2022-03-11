@@ -1,11 +1,11 @@
 // import Image from "next/image"
 import styles from "../styles/OurServices.module.scss"
-import cardImg1 from "../public/card1-min.jpg"
-import cardImg2 from "../public/card2-min.jpg"
-import cardImg3 from "../public/card3-min.jpg"
-import cardImg4 from "../public/card4-min.jpg"
-import cardImg5 from "../public/card5-min.jpg"
-import cardImg6 from "../public/card6-min.jpg"
+// import cardImg1 from "../public/card1-min.jpg"
+// import cardImg2 from "../public/card2-min.jpg"
+// import cardImg3 from "../public/card3-min.jpg"
+// import cardImg4 from "../public/card4-min.jpg"
+// import cardImg5 from "../public/card5-min.jpg"
+// import cardImg6 from "../public/card6-min.jpg"
 import { TitleUnderline } from "../public/icons"
 
 const OurServices = () => {
