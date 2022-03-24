@@ -17,7 +17,7 @@ const AboutUs = () => {
             thirdViewBox={"165"}
           />
         </div>
-        <div className={styles.contentContainer}>
+        <figure className={styles.contentContainer}>
           <div className={styles.imgContainer}>
             <img
               src="https://delux-limo.s3.us-east-2.amazonaws.com/AboutUs-min.webp"
@@ -25,7 +25,7 @@ const AboutUs = () => {
               style={{ width: "100%", height: "100%" }}
             />
           </div>
-          <div className={styles.textContainer}>
+          <figcaption className={styles.textContainer}>
             <p>
               We have been delivering premium transportation services. We pledge
               to keep our promise to provide a reliable, safe, and professional
@@ -41,8 +41,8 @@ const AboutUs = () => {
               friendly as they are helpful, and as personal as they are
               professional.
             </p>
-          </div>
-        </div>
+          </figcaption>
+        </figure>
       </div>
     </div>
   )

@@ -23,14 +23,14 @@ const OurServices = () => {
           />
         </div>
         <div className={styles.cardsBlock}>
-          <div className={styles.card1}>
+          <figure className={styles.card1}>
             <div className={styles.imgContainer}>
               <img
                 src="https://delux-limo.s3.us-east-2.amazonaws.com/card1-min.webp"
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
-            <div className={styles.textContainer}>
+            <figcaption className={styles.textContainer}>
               <span>Airport Transfers</span>
               <p>
                 Would you like to arrive at the airport in style and comfort? We
@@ -40,16 +40,16 @@ const OurServices = () => {
                 on hand to make your trip to the airport as easy and as relaxing
                 as possible
               </p>
-            </div>
-          </div>
-          <div className={styles.card2}>
+            </figcaption>
+          </figure>
+          <figure className={styles.card2}>
             <div className={styles.imgContainer}>
               <img
                 src="https://delux-limo.s3.us-east-2.amazonaws.com/card2-min.webp"
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
-            <div className={styles.textContainer}>
+            <figcaption className={styles.textContainer}>
               <span>Wine Tours</span>
               <p>
                 Deluxe Limo wine tours in the Napa Valley are perfect for any
@@ -58,16 +58,16 @@ const OurServices = () => {
                 together to make every single experience with Deluxe Limo one
                 that you will never forget.
               </p>
-            </div>
-          </div>
-          <div className={styles.card3}>
+            </figcaption>
+          </figure>
+          <figure className={styles.card3}>
             <div className={styles.imgContainer}>
               <img
                 src="https://delux-limo.s3.us-east-2.amazonaws.com/card3-min.webp"
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
-            <div className={styles.textContainer}>
+            <figcaption className={styles.textContainer}>
               <span>Point to Point Transportation</span>
               <p>
                 Our point to point caar service provides you with the kind of
@@ -78,16 +78,16 @@ const OurServices = () => {
                 chauffeurs have a wealth of knowledge and experience and are
                 trained to provide the highest level of service in the industry.
               </p>
-            </div>
-          </div>
-          <div className={styles.card4}>
+            </figcaption>
+          </figure>
+          <figure className={styles.card4}>
             <div className={styles.imgContainer}>
               <img
                 src="https://delux-limo.s3.us-east-2.amazonaws.com/card4-min.webp"
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
-            <div className={styles.textContainer}>
+            <figcaption className={styles.textContainer}>
               <span>City Tours</span>
               <p>
                 Delux Limo provides privately chauffeured tours that leave you
@@ -100,16 +100,16 @@ const OurServices = () => {
                 famous highlights and the most hidden treasures of the city,
                 based on personalized programs.
               </p>
-            </div>
-          </div>
-          <div className={styles.card5}>
+            </figcaption>
+          </figure>
+          <figure className={styles.card5}>
             <div className={styles.imgContainer}>
               <img
                 src="https://delux-limo.s3.us-east-2.amazonaws.com/card5-min.webp"
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
-            <div className={styles.textContainer}>
+            <figcaption className={styles.textContainer}>
               <span>Weddings</span>
               <p>
                 Your wedding is the most important and magical day of your life,
@@ -120,16 +120,16 @@ const OurServices = () => {
                 keep you relaxed and take the best possible care of you on the
                 day.
               </p>
-            </div>
-          </div>
-          <div className={styles.card6}>
+            </figcaption>
+          </figure>
+          <figure className={styles.card6}>
             <div className={styles.imgContainer}>
               <img
                 src="https://delux-limo.s3.us-east-2.amazonaws.com/card6-min.webp"
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
-            <div className={styles.textContainer}>
+            <figcaption className={styles.textContainer}>
               <span>Hourly Chauffer Services</span>
               <p>
                 You will be asked to indicate a pick-up location and a
@@ -141,8 +141,8 @@ const OurServices = () => {
                 enjoying a drive. We are ready to fulfill any special need you
                 have in mind!
               </p>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>

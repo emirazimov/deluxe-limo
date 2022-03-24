@@ -292,6 +292,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
   .textContainer {
     display: flex;
     flex-direction: column;
@@ -315,4 +316,15 @@
     // width: 410px;
     // height: 390px;
   }
+}
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }

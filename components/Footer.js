@@ -12,7 +12,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className={styles.mainContainer}>
+    <div className={styles.mainContainer}>
       <hr className={styles.hrFooter}></hr>
       <div className={styles.wrapper}>
         <div className={styles.firstRow}>
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </div>
   )
 }
 

@@ -150,8 +150,8 @@ const Header = ({
 
   return (
     <div className={styles.mainContainer}>
-      <header className={styles.headerContainer}>
-        <div className={styles.menu}>
+      <div className={styles.headerContainer}>
+        <nav className={styles.menu}>
           <div className={styles.imgContainer}>
             <img
               src="https://delux-limo.s3.us-east-2.amazonaws.com/menuIcon.png"
@@ -207,7 +207,7 @@ const Header = ({
               </li>
             </ul>
           )}
-        </div>
+        </nav>
         <div className={styles.headerTextContainer}>
           <div className={styles.headerText}>
             <span>
@@ -253,7 +253,7 @@ const Header = ({
             </div>
           </div>
         </div>
-      </header>
+      </div>
     </div>
   )
 }

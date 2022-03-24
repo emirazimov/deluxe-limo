@@ -52,6 +52,10 @@ const scrollToSectionContacts = () => {
   })
 }
 
+export const config = {
+  unstabe_runtimeJS: false,
+}
+
 export default function Home() {
   const [{ scroll }, set] = useSpring(() => ({ scroll: 0 }))
   const onScroll = useCallback(
@@ -76,31 +80,33 @@ export default function Home() {
         </Head> */}
 
         <div onScroll={onScroll}>
-          <div className="Header">
+          <header className="Header">
             <Header
               scrollToSectionOurServices={scrollToSectionOurServices}
               scrollToSectionFleet={scrollToSectionFleet}
               scrollToSectionAboutUs={scrollToSectionAboutUs}
               scrollToSectionContacts={scrollToSectionContacts}
             />
-          </div>
+          </header>
           {/* <div ref={observe}> */}
-          <div className="OurServices">
-            <OurServices />
-          </div>
-          {/* </div> */}
-          <div ref={observe}>
-            <div className="Fleet">{inView && <Fleet />}</div>
-          </div>
-          <div ref={observe}>
-            <div className="AboutUs">{inView && <AboutUs />}</div>
-          </div>
-          <div className="Contacts">
-            <Contacts />
-          </div>
-          <div className="Footer">
+          <main>
+            <section className="OurServices">
+              <OurServices />
+            </section>
+            {/* </div> */}
+            <section ref={observe}>
+              <div className="Fleet">{inView && <Fleet />}</div>
+            </section>
+            <section ref={observe}>
+              <div className="AboutUs">{inView && <AboutUs />}</div>
+            </section>
+            <section className="Contacts">
+              <Contacts />
+            </section>
+          </main>
+          <footer className="Footer">
             <Footer />
-          </div>
+          </footer>
         </div>
       </MainContainer>
     </>
