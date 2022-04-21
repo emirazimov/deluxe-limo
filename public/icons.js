@@ -116,8 +116,8 @@ export const EmailIcon = () => (
 export const FacebookIcon = () => (
   <div
     style={{
-      width: "30px",
-      height: "31px",
+      width: "48px",
+      height: "49px",
       borderRadius: "10px",
       cursor: "pointer",
     }}
@@ -142,8 +142,8 @@ export const FacebookIcon = () => (
 export const TwitterIcon = () => (
   <div
     style={{
-      width: "30px",
-      height: "31px",
+      width: "48px",
+      height: "49px",
       borderRadius: "10px",
       cursor: "pointer",
     }}
@@ -190,8 +190,8 @@ export const InstagramIconForContacts = () => (
 export const InstagramIcon = () => (
   <div
     style={{
-      width: "30px",
-      height: "31px",
+      width: "48px",
+      height: "49px",
       borderRadius: "10px",
       cursor: "pointer",
     }}
@@ -226,8 +226,8 @@ export const InstagramIcon = () => (
 export const LinkedinIcon = () => (
   <div
     style={{
-      width: "31px",
-      height: "32px",
+      width: "48px",
+      height: "50px",
       borderRadius: "10px",
       cursor: "pointer",
     }}

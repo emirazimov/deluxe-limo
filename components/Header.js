@@ -156,6 +156,7 @@ const Header = ({
             <img
               src="https://delux-limo.s3.us-east-2.amazonaws.com/menuIcon.png"
               style={{ width: "100%", height: "100%" }}
+              alt="headerImg"
             />
           </div>
           {isMobile ? (

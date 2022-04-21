@@ -114,7 +114,7 @@ const Fleet = () => {
                     <div className={styles.carouselItemImgContainer}>
                       <img
                         src={img[0]}
-                        alt={img[0]}
+                        alt="fleet"
                         style={{ width: "100%", height: "100%" }}
                       />
                     </div>
@@ -134,7 +134,7 @@ const Fleet = () => {
               <div className={styles.carouselItemMobile}>
                 <img
                   src="https://delux-limo.s3.us-east-2.amazonaws.com/sedan-min.webp"
-                  alt="1"
+                  alt="car1"
                   style={{ width: "100%", height: "100%" }}
                 />
                 <span>SEDAN</span>
@@ -142,7 +142,7 @@ const Fleet = () => {
               <div className={styles.carouselItemMobile}>
                 <img
                   src="https://delux-limo.s3.us-east-2.amazonaws.com/bus-min.webp"
-                  alt="2"
+                  alt="car2"
                   style={{ width: "100%", height: "100%" }}
                 />
                 <span>BUS</span>
@@ -150,7 +150,7 @@ const Fleet = () => {
               <div className={styles.carouselItemMobile}>
                 <img
                   src="https://delux-limo.s3.us-east-2.amazonaws.com/suv-min.webp"
-                  alt="3"
+                  alt="car3"
                   style={{ width: "100%", height: "100%" }}
                 />
                 <span>SUV</span>
@@ -158,7 +158,7 @@ const Fleet = () => {
               <div className={styles.carouselItemMobile}>
                 <img
                   src="https://delux-limo.s3.us-east-2.amazonaws.com/limousine-min.webp"
-                  alt="4"
+                  alt="car4"
                   style={{ width: "100%", height: "100%" }}
                 />
                 <span>LIMOUSINE</span>

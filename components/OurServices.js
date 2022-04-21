@@ -28,6 +28,7 @@ const OurServices = () => {
               <img
                 src="https://delux-limo.s3.us-east-2.amazonaws.com/card1-min.webp"
                 style={{ width: "100%", height: "100%" }}
+                alt="ServicesImg1"
               />
             </div>
             <figcaption className={styles.textContainer}>
@@ -47,6 +48,7 @@ const OurServices = () => {
               <img
                 src="https://delux-limo.s3.us-east-2.amazonaws.com/card2-min.webp"
                 style={{ width: "100%", height: "100%" }}
+                alt="ServicesImg2"
               />
             </div>
             <figcaption className={styles.textContainer}>
@@ -65,6 +67,7 @@ const OurServices = () => {
               <img
                 src="https://delux-limo.s3.us-east-2.amazonaws.com/card3-min.webp"
                 style={{ width: "100%", height: "100%" }}
+                alt="ServicesImg3"
               />
             </div>
             <figcaption className={styles.textContainer}>
@@ -85,6 +88,7 @@ const OurServices = () => {
               <img
                 src="https://delux-limo.s3.us-east-2.amazonaws.com/card4-min.webp"
                 style={{ width: "100%", height: "100%" }}
+                alt="ServicesImg4"
               />
             </div>
             <figcaption className={styles.textContainer}>
@@ -107,6 +111,7 @@ const OurServices = () => {
               <img
                 src="https://delux-limo.s3.us-east-2.amazonaws.com/card5-min.webp"
                 style={{ width: "100%", height: "100%" }}
+                alt="ServicesImg5"
               />
             </div>
             <figcaption className={styles.textContainer}>
@@ -127,6 +132,7 @@ const OurServices = () => {
               <img
                 src="https://delux-limo.s3.us-east-2.amazonaws.com/card6-min.webp"
                 style={{ width: "100%", height: "100%" }}
+                alt="ServicesImg6"
               />
             </div>
             <figcaption className={styles.textContainer}>
