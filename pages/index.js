@@ -1,54 +1,74 @@
-import Head from "next/head"
+import Head from 'next/head'
 // import Image from "next/image"
 // import Fleet from "../components/Fleet"
 // import Header from "../components/Header"
 // import OurServices from "../components/OurServices"
-import styles from "../styles/Home.module.css"
-import dynamic from "next/dynamic"
+import styles from '../styles/Home.module.css'
+import dynamic from 'next/dynamic'
 // import AboutUs from "../components/AboutUs"
 // import Contacts from "../components/Contacts"
 // import Footer from "../components/Footer"
-import MainContainer from "../components/MainContainer"
-import { scroller } from "react-scroll"
-import { useSpring } from "react-spring"
-import { useCallback } from "react"
-import useInView from "react-cool-inview"
+import MainContainer from '../components/MainContainer'
+import { scroller } from 'react-scroll'
+import { useSpring } from 'react-spring'
+import { useCallback } from 'react'
+import useInView from 'react-cool-inview'
+import loadable from '@loadable/component'
 
-const Header = dynamic(() => import("../components/Header"))
-const OurServices = dynamic(() => import("../components/OurServices"))
-const Fleet = dynamic(() => import("../components/Fleet"), {
-  ssr: false,
+const Header = loadable(() => import('../components/Header'), {
+  fallback: <div>Loading...</div>,
 })
-const AboutUs = dynamic(() => import("../components/AboutUs"))
-const Contacts = dynamic(() => import("../components/Contacts"))
-const Footer = dynamic(() => import("../components/Footer"))
+const OurServices = loadable(() => import('../components/OurServices'), {
+  fallback: <div>Loading...</div>,
+})
+const Fleet = loadable(() => import('../components/Fleet'), {
+  fallback: <div>Loading...</div>,
+})
+const AboutUs = loadable(() => import('../components/AboutUs'), {
+  fallback: <div>Loading...</div>,
+})
+const Contacts = loadable(() => import('../components/Contacts'), {
+  fallback: <div>Loading...</div>,
+})
+const Footer = loadable(() => import('../components/Footer'), {
+  fallback: <div>Loading...</div>,
+})
+
+// const Header = dynamic(() => import("../components/Header"))
+// const OurServices = dynamic(() => import("../components/OurServices"))
+// const Fleet = dynamic(() => import("../components/Fleet"), {
+//   ssr: false,
+// })
+// const AboutUs = dynamic(() => import("../components/AboutUs"))
+// const Contacts = dynamic(() => import("../components/Contacts"))
+// const Footer = dynamic(() => import("../components/Footer"))
 
 const scrollToSectionOurServices = () => {
-  scroller.scrollTo("OurServices", {
+  scroller.scrollTo('OurServices', {
     duration: 800,
     delay: 0,
-    smooth: "easeInOutQuart",
+    smooth: 'easeInOutQuart',
   })
 }
 const scrollToSectionFleet = () => {
-  scroller.scrollTo("Fleet", {
+  scroller.scrollTo('Fleet', {
     duration: 800,
     delay: 0,
-    smooth: "easeInOutQuart",
+    smooth: 'easeInOutQuart',
   })
 }
 const scrollToSectionAboutUs = () => {
-  scroller.scrollTo("AboutUs", {
+  scroller.scrollTo('AboutUs', {
     duration: 800,
     delay: 0,
-    smooth: "easeInOutQuart",
+    smooth: 'easeInOutQuart',
   })
 }
 const scrollToSectionContacts = () => {
-  scroller.scrollTo("Contacts", {
+  scroller.scrollTo('Contacts', {
     duration: 800,
     delay: 0,
-    smooth: "easeInOutQuart",
+    smooth: 'easeInOutQuart',
   })
 }
 
@@ -80,7 +100,7 @@ export default function Home() {
         </Head> */}
 
         <div onScroll={onScroll}>
-          <header className="Header">
+          <header className='Header'>
             <Header
               scrollToSectionOurServices={scrollToSectionOurServices}
               scrollToSectionFleet={scrollToSectionFleet}
@@ -90,21 +110,21 @@ export default function Home() {
           </header>
           {/* <div ref={observe}> */}
           <main>
-            <section className="OurServices">
+            <section className='OurServices'>
               <OurServices />
             </section>
             {/* </div> */}
             <section ref={observe}>
-              <div className="Fleet">{inView && <Fleet />}</div>
+              <div className='Fleet'>{inView && <Fleet />}</div>
             </section>
             <section ref={observe}>
-              <div className="AboutUs">{inView && <AboutUs />}</div>
+              <div className='AboutUs'>{inView && <AboutUs />}</div>
             </section>
-            <section className="Contacts">
+            <section className='Contacts'>
               <Contacts />
             </section>
           </main>
-          <footer className="Footer">
+          <footer className='Footer'>
             <Footer />
           </footer>
         </div>

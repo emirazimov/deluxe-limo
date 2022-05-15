@@ -1,7 +1,14 @@
 // import Image from "next/image"
-import { TitleUnderline } from "../public/icons"
-import styles from "../styles/AboutUs.module.scss"
+import { TitleUnderline } from '../public/icons'
+import styles from '../styles/AboutUs.module.scss'
 // import aboutUs from "../public/AboutUs-min.jpg"
+import Image from 'next/image'
+
+function imageLoader({ src, width, height }) {
+  // const relativeSrc = (src) => src.split("/").pop()
+
+  return `https://delux-limo.s3.us-east-2.amazonaws.com/${src}`
+}
 
 const AboutUs = () => {
   return (
@@ -10,19 +17,28 @@ const AboutUs = () => {
         <div className={styles.titleContainer}>
           <span>ABOUT US</span>
           <TitleUnderline
-            color={"white"}
-            width={"160px"}
-            height={"22px"}
-            firstViewBox={"40"}
-            thirdViewBox={"165"}
+            color={'white'}
+            width={'160px'}
+            height={'22px'}
+            firstViewBox={'40'}
+            thirdViewBox={'165'}
           />
         </div>
         <figure className={styles.contentContainer}>
           <div className={styles.imgContainer}>
-            <img
-              src="https://delux-limo.s3.us-east-2.amazonaws.com/AboutUs-min.webp"
-              alt="aboutUs"
-              style={{ width: "100%", height: "100%" }}
+            {/* <img
+              src='https://delux-limo.s3.us-east-2.amazonaws.com/AboutUs-min.webp'
+              alt='aboutUs'
+              style={{ width: '100%', height: '100%' }}
+            /> */}
+            <Image
+              loader={imageLoader}
+              src='AboutUs-min.webp'
+              alt='aboutUs'
+              // style={{ width: "100%", height: "100%" }}
+              width={'550%'}
+              height={'413%'}
+              // layout='fill'
             />
           </div>
           <figcaption className={styles.textContainer}>

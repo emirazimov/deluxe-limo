@@ -1,34 +1,39 @@
-import styles from "../styles/Fleet.module.scss"
+import styles from '../styles/Fleet.module.scss'
 // import Image from "next/image"
 // import sedan from "../public/sedan-min.png"
 // import bus from "../public/bus-min.png"
 // import suv from "../public/suv-min.png"
 // import limousine from "../public/limousine-min.png"
-import { useEffect, useState } from "react"
-import Slider from "react-slick"
+import { useEffect, useState } from 'react'
+import Slider from 'react-slick'
 // import CarouselCustom from "./Carousel"
-import Carousel, { consts } from "react-elastic-carousel"
-import dynamic from "next/dynamic"
-import { NextArrowIcon, PrevArrowIcon, TitleUnderline } from "../public/icons"
+import Carousel, { consts } from 'react-elastic-carousel'
+import dynamic from 'next/dynamic'
+import { NextArrowIcon, PrevArrowIcon, TitleUnderline } from '../public/icons'
 
-const CarouselCustom = dynamic(() => import("./Carousel"), {
+import Image from 'next/image'
+
+function imageLoader({ src, width, height }) {
+  // const relativeSrc = (src) => src.split("/").pop()
+
+  return `https://delux-limo.s3.us-east-2.amazonaws.com/${src}`
+}
+
+const CarouselCustom = dynamic(() => import('./Carousel'), {
   ssr: false,
 })
 
 const images = [
-  ["https://delux-limo.s3.us-east-2.amazonaws.com/suv-min.webp", "suv"],
-  ["https://delux-limo.s3.us-east-2.amazonaws.com/sedan-min.webp", "sedan"],
-  ["https://delux-limo.s3.us-east-2.amazonaws.com/bus-min.webp", "bus"],
-  [
-    "https://delux-limo.s3.us-east-2.amazonaws.com/limousine-min.webp",
-    "limousine",
-  ],
+  ['suv-min.webp', 'suv'],
+  ['sedan-min.webp', 'sedan'],
+  ['bus-min.webp', 'bus'],
+  ['limousine-min.webp', 'limousine'],
 ]
 
 const Fleet = () => {
   const NextArrow = ({ onClick }) => {
     return (
-      <div className="arrow next" onClick={onClick}>
+      <div className='arrow next' onClick={onClick}>
         <NextArrowIcon />
       </div>
     )
@@ -36,7 +41,7 @@ const Fleet = () => {
 
   const PrevArrow = ({ onClick }) => {
     return (
-      <div className="arrow prev" onClick={onClick}>
+      <div className='arrow prev' onClick={onClick}>
         <PrevArrowIcon />
       </div>
     )
@@ -70,10 +75,10 @@ const Fleet = () => {
         onClick={onClick}
         disabled={isEdge}
         style={{
-          height: "44px",
-          border: "none",
-          background: "transparent",
-          marginTop: "100px",
+          height: '44px',
+          border: 'none',
+          background: 'transparent',
+          marginTop: '100px',
         }}
       >
         {pointer}
@@ -81,12 +86,12 @@ const Fleet = () => {
     )
   }
   const [matches, setMatches] = useState(
-    window.matchMedia("(max-width: 781px)").matches
+    window.matchMedia('(max-width: 781px)').matches
   )
 
   useEffect(() => {
     const handler = (e) => setMatches(e.matches)
-    window.matchMedia("(min-width: 781px)").addListener(handler)
+    window.matchMedia('(min-width: 781px)').addListener(handler)
   }, [])
 
   return (
@@ -95,32 +100,41 @@ const Fleet = () => {
         <div className={styles.titleContainer}>
           <span>FLEET</span>
           <TitleUnderline
-            color={"black"}
-            width={"94px"}
-            height={"22px"}
-            firstViewBox={"80"}
-            thirdViewBox={"90"}
+            color={'black'}
+            width={'94px'}
+            height={'22px'}
+            firstViewBox={'80'}
+            thirdViewBox={'90'}
           />
         </div>
         <div className={styles.carouselContainer}>
           {/* <CarouselCustom /> */}
           {!matches ? (
-            <Slider {...settings} style={{ width: "100%", height: "100%" }}>
+            <Slider {...settings} style={{ width: '100%', height: '100%' }}>
               {images.map((img, idx) => (
                 <div
-                  className={idx === imageIndex ? "slide activeSlide" : "slide"}
+                  className={idx === imageIndex ? 'slide activeSlide' : 'slide'}
                 >
                   <div className={styles.carouselItem}>
                     <div className={styles.carouselItemImgContainer}>
-                      <img
+                      {/* <img
                         src={img[0]}
-                        alt="fleet"
-                        style={{ width: "100%", height: "100%" }}
+                        alt='fleet'
+                        style={{ width: '100%', height: '100%' }}
+                      /> */}
+                      <Image
+                        loader={imageLoader}
+                        src={img[0]}
+                        alt='fleet'
+                        // style={{ width: "100%", height: "100%" }}
+                        width={'370%'}
+                        height={'212%'}
+                        // layout='fill'
                       />
                     </div>
                     <span
                       className={
-                        idx === imageIndex ? "slide-text-hidden" : "slide-text"
+                        idx === imageIndex ? 'slide-text-hidden' : 'slide-text'
                       }
                     >
                       {img[1]}
@@ -133,33 +147,33 @@ const Fleet = () => {
             <Carousel renderArrow={myArrow} pagination={false}>
               <div className={styles.carouselItemMobile}>
                 <img
-                  src="https://delux-limo.s3.us-east-2.amazonaws.com/sedan-min.webp"
-                  alt="car1"
-                  style={{ width: "100%", height: "100%" }}
+                  src='https://delux-limo.s3.us-east-2.amazonaws.com/sedan-min.webp'
+                  alt='car1'
+                  style={{ width: '100%', height: '100%' }}
                 />
                 <span>SEDAN</span>
               </div>
               <div className={styles.carouselItemMobile}>
                 <img
-                  src="https://delux-limo.s3.us-east-2.amazonaws.com/bus-min.webp"
-                  alt="car2"
-                  style={{ width: "100%", height: "100%" }}
+                  src='https://delux-limo.s3.us-east-2.amazonaws.com/bus-min.webp'
+                  alt='car2'
+                  style={{ width: '100%', height: '100%' }}
                 />
                 <span>BUS</span>
               </div>
               <div className={styles.carouselItemMobile}>
                 <img
-                  src="https://delux-limo.s3.us-east-2.amazonaws.com/suv-min.webp"
-                  alt="car3"
-                  style={{ width: "100%", height: "100%" }}
+                  src='https://delux-limo.s3.us-east-2.amazonaws.com/suv-min.webp'
+                  alt='car3'
+                  style={{ width: '100%', height: '100%' }}
                 />
                 <span>SUV</span>
               </div>
               <div className={styles.carouselItemMobile}>
                 <img
-                  src="https://delux-limo.s3.us-east-2.amazonaws.com/limousine-min.webp"
-                  alt="car4"
-                  style={{ width: "100%", height: "100%" }}
+                  src='https://delux-limo.s3.us-east-2.amazonaws.com/limousine-min.webp'
+                  alt='car4'
+                  style={{ width: '100%', height: '100%' }}
                 />
                 <span>LIMOUSINE</span>
               </div>

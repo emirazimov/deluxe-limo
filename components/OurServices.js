@@ -1,12 +1,19 @@
 // import Image from "next/image"
-import styles from "../styles/OurServices.module.scss"
+import styles from '../styles/OurServices.module.scss'
 // import cardImg1 from "../public/card1-min.jpg"
 // import cardImg2 from "../public/card2-min.jpg"
 // import cardImg3 from "../public/card3-min.jpg"
 // import cardImg4 from "../public/card4-min.jpg"
 // import cardImg5 from "../public/card5-min.jpg"
 // import cardImg6 from "../public/card6-min.jpg"
-import { TitleUnderline } from "../public/icons"
+import { TitleUnderline } from '../public/icons'
+import Image from 'next/image'
+
+function imageLoader({ src, width, height }) {
+  // const relativeSrc = (src) => src.split("/").pop()
+
+  return `https://delux-limo.s3.us-east-2.amazonaws.com/${src}`
+}
 
 const OurServices = () => {
   return (
@@ -15,20 +22,29 @@ const OurServices = () => {
         <div className={styles.mainTitle}>
           <span>OUR SERVICES</span>
           <TitleUnderline
-            color={"white"}
-            width={"222px"}
-            height={"22px"}
-            firstViewBox={"0"}
-            thirdViewBox={"250"}
+            color={'white'}
+            width={'222px'}
+            height={'22px'}
+            firstViewBox={'0'}
+            thirdViewBox={'250'}
           />
         </div>
         <div className={styles.cardsBlock}>
           <figure className={styles.card1}>
             <div className={styles.imgContainer}>
-              <img
-                src="https://delux-limo.s3.us-east-2.amazonaws.com/card1-min.webp"
-                style={{ width: "100%", height: "100%" }}
-                alt="ServicesImg1"
+              {/* <img
+                src='https://delux-limo.s3.us-east-2.amazonaws.com/card1-min.webp'
+                style={{ width: '100%', height: '100%' }}
+                alt='ServicesImg1'
+              /> */}
+              <Image
+                loader={imageLoader}
+                src='card1-min.webp'
+                alt='ServicesImg1'
+                // style={{ width: "100%", height: "100%" }}
+                width={'370%'}
+                height={'353%'}
+                // layout='fill'
               />
             </div>
             <figcaption className={styles.textContainer}>
@@ -45,10 +61,19 @@ const OurServices = () => {
           </figure>
           <figure className={styles.card2}>
             <div className={styles.imgContainer}>
-              <img
-                src="https://delux-limo.s3.us-east-2.amazonaws.com/card2-min.webp"
-                style={{ width: "100%", height: "100%" }}
-                alt="ServicesImg2"
+              {/* <img
+                src='https://delux-limo.s3.us-east-2.amazonaws.com/card2-min.webp'
+                style={{ width: '100%', height: '100%' }}
+                alt='ServicesImg2'
+              /> */}
+              <Image
+                loader={imageLoader}
+                src='card2-min.webp'
+                alt='ServicesImg2'
+                // style={{ width: "100%", height: "100%" }}
+                width={'370%'}
+                height={'353%'}
+                // layout='fill'
               />
             </div>
             <figcaption className={styles.textContainer}>
@@ -64,10 +89,19 @@ const OurServices = () => {
           </figure>
           <figure className={styles.card3}>
             <div className={styles.imgContainer}>
-              <img
-                src="https://delux-limo.s3.us-east-2.amazonaws.com/card3-min.webp"
-                style={{ width: "100%", height: "100%" }}
-                alt="ServicesImg3"
+              {/* <img
+                src='https://delux-limo.s3.us-east-2.amazonaws.com/card3-min.webp'
+                style={{ width: '100%', height: '100%' }}
+                alt='ServicesImg3'
+              /> */}
+              <Image
+                loader={imageLoader}
+                src='card3-min.webp'
+                alt='ServicesImg3'
+                // style={{ width: "100%", height: "100%" }}
+                width={'370%'}
+                height={'353%'}
+                // layout='fill'
               />
             </div>
             <figcaption className={styles.textContainer}>
@@ -85,10 +119,19 @@ const OurServices = () => {
           </figure>
           <figure className={styles.card4}>
             <div className={styles.imgContainer}>
-              <img
-                src="https://delux-limo.s3.us-east-2.amazonaws.com/card4-min.webp"
-                style={{ width: "100%", height: "100%" }}
-                alt="ServicesImg4"
+              {/* <img
+                src='https://delux-limo.s3.us-east-2.amazonaws.com/card4-min.webp'
+                style={{ width: '100%', height: '100%' }}
+                alt='ServicesImg4'
+              /> */}
+              <Image
+                loader={imageLoader}
+                src='card4-min.webp'
+                alt='ServicesImg4'
+                // style={{ width: "100%", height: "100%" }}
+                width={'370%'}
+                height={'353%'}
+                // layout='fill'
               />
             </div>
             <figcaption className={styles.textContainer}>
@@ -108,10 +151,19 @@ const OurServices = () => {
           </figure>
           <figure className={styles.card5}>
             <div className={styles.imgContainer}>
-              <img
-                src="https://delux-limo.s3.us-east-2.amazonaws.com/card5-min.webp"
-                style={{ width: "100%", height: "100%" }}
-                alt="ServicesImg5"
+              {/* <img
+                src='https://delux-limo.s3.us-east-2.amazonaws.com/card5-min.webp'
+                style={{ width: '100%', height: '100%' }}
+                alt='ServicesImg5'
+              /> */}
+              <Image
+                loader={imageLoader}
+                src='card5-min.webp'
+                alt='ServicesImg5'
+                // style={{ width: "100%", height: "100%" }}
+                width={'370%'}
+                height={'353%'}
+                // layout='fill'
               />
             </div>
             <figcaption className={styles.textContainer}>
@@ -129,10 +181,19 @@ const OurServices = () => {
           </figure>
           <figure className={styles.card6}>
             <div className={styles.imgContainer}>
-              <img
-                src="https://delux-limo.s3.us-east-2.amazonaws.com/card6-min.webp"
-                style={{ width: "100%", height: "100%" }}
-                alt="ServicesImg6"
+              {/* <img
+                src='https://delux-limo.s3.us-east-2.amazonaws.com/card6-min.webp'
+                style={{ width: '100%', height: '100%' }}
+                alt='ServicesImg6'
+              /> */}
+              <Image
+                loader={imageLoader}
+                src='card6-min.webp'
+                alt='ServicesImg6'
+                // style={{ width: "100%", height: "100%" }}
+                width={'370%'}
+                height={'353%'}
+                // layout='fill'
               />
             </div>
             <figcaption className={styles.textContainer}>

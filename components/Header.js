@@ -1,25 +1,31 @@
 // import Image from "next/image"
-import { CheckmarkIcon, CloseIcon } from "../public/icons"
+import { CheckmarkIcon, CloseIcon } from '../public/icons'
 // import menuIcon from "../public/menuIcon.png"
-import styles from "../styles/Header.module.scss"
-import Drawer from "@material-ui/core/Drawer"
-import { makeStyles, useTheme } from "@material-ui/core/styles"
-import IconButton from "@material-ui/core/IconButton"
-import MenuIcon from "@material-ui/icons/Menu"
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"
-import ChevronRightIcon from "@material-ui/icons/ChevronRight"
-import { AppBar } from "@material-ui/core"
-
-import { useMediaQuery } from "@material-ui/core"
-import { useState } from "react"
+import styles from '../styles/Header.module.scss'
+import Drawer from '@material-ui/core/Drawer'
+import { makeStyles, useTheme } from '@material-ui/core/styles'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+import { AppBar } from '@material-ui/core'
+import Image from 'next/image'
+import { useMediaQuery } from '@material-ui/core'
+import { useState } from 'react'
 
 const drawerWidth = 240
 
+function imageLoader({ src, width, height }) {
+  // const relativeSrc = (src) => src.split("/").pop()
+
+  return `https://delux-limo.s3.us-east-2.amazonaws.com/${src}`
+}
+
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
-    position: "absolute",
-    right: "13px",
+    display: 'flex',
+    position: 'absolute',
+    right: '13px',
   },
   // appBar: {
   //   transition: theme.transitions.create(['margin', 'width'], {
@@ -39,32 +45,32 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
   },
   hide: {
-    display: "none",
+    display: 'none',
   },
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
-    "& .MuiDrawer-paper": {
-      backgroundColor: "black",
+    '& .MuiDrawer-paper': {
+      backgroundColor: 'black',
       // height: "100%",
       // width: "60%",
       // left: "0",
     },
-    "& .jss5": {
-      left: "initial",
-      width: "60%",
-      bottom: "initial",
-      height: "100%",
-      position: "none",
-      background: "black",
+    '& .jss5': {
+      left: 'initial',
+      width: '60%',
+      bottom: 'initial',
+      height: '100%',
+      position: 'none',
+      background: 'black',
     },
-    "& .jss6": {
-      left: "initial",
-      width: "initial",
-      bottom: "initial",
-      height: "initial",
-      position: "initial",
-      background: "initial",
+    '& .jss6': {
+      left: 'initial',
+      width: 'initial',
+      bottom: 'initial',
+      height: 'initial',
+      position: 'initial',
+      background: 'initial',
     },
     // "& .MuiDrawer-paperAnchorRight": {
     //   backgroundColor: "black",
@@ -87,43 +93,43 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: "black",
+    backgroundColor: 'black',
   },
   drawerHeader: {
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
     padding: theme.spacing(0, 1),
-    paddingTop: "15px",
+    paddingTop: '15px',
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-    justifyContent: "flex-end",
+    justifyContent: 'flex-end',
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-    transition: theme.transitions.create("margin", {
+    transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: -drawerWidth,
   },
   contentShift: {
-    transition: theme.transitions.create("margin", {
+    transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
     marginLeft: 0,
   },
   appBar: {
-    width: "100%",
-    position: "sticky",
-    filter: "opacity(4)",
-    backdropFilter: "blur(6px)",
-    "&::-webkit-filter": "opacity(4)",
-    "&::-webkit-backdrop-filter": "blur(6px)",
-    backgroundColor: "rgba(255, 255, 255, 0.59)",
-    "&.MuiPaper-elevation4": {
-      boxShadow: "none",
+    width: '100%',
+    position: 'sticky',
+    filter: 'opacity(4)',
+    backdropFilter: 'blur(6px)',
+    '&::-webkit-filter': 'opacity(4)',
+    '&::-webkit-backdrop-filter': 'blur(6px)',
+    backgroundColor: 'rgba(255, 255, 255, 0.59)',
+    '&.MuiPaper-elevation4': {
+      boxShadow: 'none',
     },
   },
 }))
@@ -135,7 +141,7 @@ const Header = ({
   scrollToSectionContacts,
 }) => {
   const classes = useStyles()
-  const isMobile = useMediaQuery("(max-width:700px)")
+  const isMobile = useMediaQuery('(max-width:700px)')
 
   const theme = useTheme()
   const [open, setOpen] = useState(false)
@@ -153,27 +159,36 @@ const Header = ({
       <div className={styles.headerContainer}>
         <nav className={styles.menu}>
           <div className={styles.imgContainer}>
-            <img
-              src="https://delux-limo.s3.us-east-2.amazonaws.com/menuIcon.png"
-              style={{ width: "100%", height: "100%" }}
-              alt="headerImg"
+            {/* <img
+              src='https://delux-limo.s3.us-east-2.amazonaws.com/menuIcon.png'
+              style={{ width: '100%', height: '100%' }}
+              alt='headerImg'
+            /> */}
+            <Image
+              loader={imageLoader}
+              src='menuIcon.png'
+              alt='headerImg'
+              // style={{ width: "100%", height: "100%" }}
+              width={'370%'}
+              height={'102%'}
+              // layout='fill'
             />
           </div>
           {isMobile ? (
             <div className={classes.root}>
               <IconButton
-                color="inherit"
-                aria-label="open drawer"
+                color='inherit'
+                aria-label='open drawer'
                 onClick={handleDrawerOpen}
-                edge="start"
+                edge='start'
                 className={classes.menuButton}
               >
-                <MenuIcon style={{ color: "white", transform: "scale(1.4)" }} />
+                <MenuIcon style={{ color: 'white', transform: 'scale(1.4)' }} />
               </IconButton>
 
               <Drawer
                 className={classes.drawer}
-                anchor="right"
+                anchor='right'
                 open={open}
                 classes={{
                   paper: classes.drawerPaper,
@@ -181,7 +196,7 @@ const Header = ({
               >
                 <div className={classes.drawerHeader}>
                   <IconButton onClick={handleDrawerClose}>
-                    {theme.direction === "ltr" ? <CloseIcon /> : <CloseIcon />}
+                    {theme.direction === 'ltr' ? <CloseIcon /> : <CloseIcon />}
                   </IconButton>
                 </div>
                 <ul className={styles.ulMenuMobile}>
