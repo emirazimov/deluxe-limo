@@ -16,22 +16,22 @@ import useInView from 'react-cool-inview'
 import loadable from '@loadable/component'
 
 const Header = loadable(() => import('../components/Header'), {
-  fallback: <div>Loading...</div>,
+  fallback: <div></div>,
 })
 const OurServices = loadable(() => import('../components/OurServices'), {
-  fallback: <div>Loading...</div>,
+  fallback: <div></div>,
 })
 const Fleet = loadable(() => import('../components/Fleet'), {
-  fallback: <div>Loading...</div>,
+  fallback: <div></div>,
 })
 const AboutUs = loadable(() => import('../components/AboutUs'), {
-  fallback: <div>Loading...</div>,
+  fallback: <div></div>,
 })
 const Contacts = loadable(() => import('../components/Contacts'), {
-  fallback: <div>Loading...</div>,
+  fallback: <div></div>,
 })
 const Footer = loadable(() => import('../components/Footer'), {
-  fallback: <div>Loading...</div>,
+  fallback: <div></div>,
 })
 
 // const Header = dynamic(() => import("../components/Header"))

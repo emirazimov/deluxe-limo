@@ -51,23 +51,30 @@
   // }
   .imgContainer {
     width: 614px;
+    height: 413px;
     @media (max-width: 1267px) {
       width: 524px;
+      height: 393px;
     }
     @media (max-width: 1143px) {
       width: 614px;
+      height: 413px;
     }
     @media (max-width: 705px) {
       width: 454px;
+      height: 340px;
     }
     @media (max-width: 539px) {
       width: 354px;
+      height: 265px;
     }
     @media (max-width: 385px) {
       width: 300px;
+      height: 225px;
     }
     @media (max-width: 332px) {
       width: 285px;
+      height: 214px;
     }
   }
 }

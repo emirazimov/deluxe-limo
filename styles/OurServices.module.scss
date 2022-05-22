@@ -328,3 +328,12 @@
   margin-inline-start: 0;
   margin-inline-end: 0;
 }
+.imgContainer {
+  width: 363.74px;
+  height: 347.03px;
+  @media (max-width: 1252px) {
+    width: 287px;
+    height: 274px;
+  }
+  // height: 380px;
+}

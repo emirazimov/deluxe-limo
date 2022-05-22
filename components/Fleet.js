@@ -10,7 +10,6 @@ import Slider from 'react-slick'
 import Carousel, { consts } from 'react-elastic-carousel'
 import dynamic from 'next/dynamic'
 import { NextArrowIcon, PrevArrowIcon, TitleUnderline } from '../public/icons'
-
 import Image from 'next/image'
 
 function imageLoader({ src, width, height }) {
@@ -19,9 +18,9 @@ function imageLoader({ src, width, height }) {
   return `https://delux-limo.s3.us-east-2.amazonaws.com/${src}`
 }
 
-const CarouselCustom = dynamic(() => import('./Carousel'), {
-  ssr: false,
-})
+// const CarouselCustom = dynamic(() => import('./Carousel'), {
+//   ssr: false,
+// })
 
 const images = [
   ['suv-min.webp', 'suv'],
@@ -92,7 +91,20 @@ const Fleet = () => {
   useEffect(() => {
     const handler = (e) => setMatches(e.matches)
     window.matchMedia('(min-width: 781px)').addListener(handler)
+
+    // console.log(
+    //   'recCarouselWrapper ' + recCarouselWrapper,
+    //   'recCarousel ' + recCarousel
+    // )
   }, [])
+  // useEffect(() => {
+  //   document
+  //     .getElementsByClassName('rec')[0]
+  //     .setAttribute('style', 'height: 400px')
+  //   document
+  //     .getElementsByClassName('rec-carousel')[0]
+  //     .setAttribute('style', 'height: 400px')
+  // }, [])
 
   return (
     <div className={styles.mainContainer}>
@@ -144,36 +156,76 @@ const Fleet = () => {
               ))}
             </Slider>
           ) : (
-            <Carousel renderArrow={myArrow} pagination={false}>
+            <Carousel
+              renderArrow={myArrow}
+              pagination={false}
+              // style={{ height: '400px' }}
+            >
               <div className={styles.carouselItemMobile}>
-                <img
+                {/* <img
                   src='https://delux-limo.s3.us-east-2.amazonaws.com/sedan-min.webp'
                   alt='car1'
                   style={{ width: '100%', height: '100%' }}
+                /> */}
+                <Image
+                  loader={imageLoader}
+                  src='sedan-min.webp'
+                  alt='car1'
+                  // style={{ width: "100%", height: "100%" }}
+                  width={'370%'}
+                  height={'212%'}
+                  // layout='fill'
                 />
                 <span>SEDAN</span>
               </div>
               <div className={styles.carouselItemMobile}>
-                <img
+                {/* <img
                   src='https://delux-limo.s3.us-east-2.amazonaws.com/bus-min.webp'
                   alt='car2'
                   style={{ width: '100%', height: '100%' }}
+                /> */}
+                <Image
+                  loader={imageLoader}
+                  src='bus-min.webp'
+                  alt='car2'
+                  // style={{ width: "100%", height: "100%" }}
+                  width={'370%'}
+                  height={'212%'}
+                  // layout='fill'
                 />
                 <span>BUS</span>
               </div>
               <div className={styles.carouselItemMobile}>
-                <img
+                {/* <img
                   src='https://delux-limo.s3.us-east-2.amazonaws.com/suv-min.webp'
                   alt='car3'
                   style={{ width: '100%', height: '100%' }}
+                /> */}
+                <Image
+                  loader={imageLoader}
+                  src='suv-min.webp'
+                  alt='car3'
+                  // style={{ width: "100%", height: "100%" }}
+                  width={'370%'}
+                  height={'212%'}
+                  // layout='fill'
                 />
                 <span>SUV</span>
               </div>
               <div className={styles.carouselItemMobile}>
-                <img
+                {/* <img
                   src='https://delux-limo.s3.us-east-2.amazonaws.com/limousine-min.webp'
                   alt='car4'
                   style={{ width: '100%', height: '100%' }}
+                /> */}
+                <Image
+                  loader={imageLoader}
+                  src='limousine-min.webp'
+                  alt='car4'
+                  // style={{ width: "100%", height: "100%" }}
+                  width={'370%'}
+                  height={'212%'}
+                  // layout='fill'
                 />
                 <span>LIMOUSINE</span>
               </div>
