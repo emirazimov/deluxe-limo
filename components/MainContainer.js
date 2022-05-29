@@ -122,29 +122,20 @@ const MainContainer = ({ children, keywords }) => {
         <script
           src='https://bookinglane-widgets.s3.us-east-2.amazonaws.com/option1-widget-files/deluxe-limo.js'
           type='text/javascript'
+          defer
         ></script>
-        {/* <script src="https://bookinglane-widgets.s3.us-east-2.amazonaws.com/Global-widget-files/widget.js"></script> */}
+        {/* <script
+          src='https://bookinglane-widgets.s3.us-east-2.amazonaws.com/Global-widget-files/widget.js'
+          type='text/javascript'
+          defer
+        ></script> */}
       </Head>
       <div>{children}</div>
       <div id='widget-by-bookinglane'></div>
 
       <Script
         src='https://bookinglane-widgets.s3.us-east-2.amazonaws.com/Global-widget-files/widget.js'
-        // onLoad={() => {
-        //   // let styleForJss3 = `
-        //   //   display: block;
-        //   // `
-        //   // document.getElementsByClassName("jss3").style = styleForJss3
-        //   // console.log(document.getElementsByClassName("jss5"))
-        //   // document?.body?.querySelector(".jss3")?.style?.display = "block"
-        //   // document?.getElementsByClassName("jss4")[0]?.style?.width = "100%"
-        //   // document.body.querySelector(".jss5").style.display = "none"
-        //   // document.body.querySelector(".jss5").style.width = "initial"
-        //   // document.body.querySelector(".jss5").style.bottom = "initial"
-        //   // document.body.querySelector(".jss5").style.height = "initial"
-        //   // document.body.querySelector(".jss5").style.position = "initial"
-        //   // document.body.querySelector(".jss5").style.background = "initial"
-        // }}
+        strategy='lazyOnload'
       ></Script>
       {/* <Script
         onLoad={() => {
